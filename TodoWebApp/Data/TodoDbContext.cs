@@ -1,0 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using TodoWebApp.Models;
+
+namespace TodoWebApp;
+
+public class TodoDbContext : DbContext
+{
+    public TodoDbContext(DbContextOptions<TodoDbContext> options)
+        : base(options)
+    {
+    }
+
+    public DbSet<Todo>? Todo { get; set; }
+}
