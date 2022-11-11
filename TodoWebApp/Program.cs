@@ -9,6 +9,7 @@ var connection = builder.Configuration.GetConnectionString("LocaldbConnection");
 ArgumentNullException.ThrowIfNullOrEmpty(connection);
 builder.Services.AddDbContext<TodoDbContext>(options =>
     options.UseSqlServer(connection));
+builder.Logging.AddAzureWebAppDiagnostics();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
