@@ -1,3 +1,4 @@
+using Connection.Builder;
 using Microsoft.EntityFrameworkCore;
 using TodoWebApp.Data;
 
@@ -5,10 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-var connection = builder.Configuration.GetConnectionString("LocaldbConnection");
-ArgumentNullException.ThrowIfNullOrEmpty(connection);
 builder.Services.AddDbContext<TodoDbContext>(options =>
-    options.UseSqlServer(connection));
+    options.UseSqlServer(new ConnectionBuilder(builder).DbConnectionString));
 builder.Logging.AddAzureWebAppDiagnostics();
 var app = builder.Build();
 
