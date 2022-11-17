@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TodoDbContext>(options =>
-    options.UseSqlServer(new ConnectionBuilder(builder).DbConnectionString));
+    options.UseSqlServer(new ConnectionBuilder(builder, "TodoDb").DbConnectionString));
 builder.Logging.AddAzureWebAppDiagnostics();
 var app = builder.Build();
 
