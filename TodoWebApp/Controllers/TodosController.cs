@@ -93,7 +93,7 @@ public class TodosController : Controller
     // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("ID,Description,CreatedDate")] Todo todo)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Description,CreatedDate")] Todo todo)
     {
         if (id != todo.Id)
         {

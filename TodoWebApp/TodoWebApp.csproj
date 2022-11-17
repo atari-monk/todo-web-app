@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>TodoWebApp</RootNamespace>
         <RestoreSources>$(RestoreSources);C:\atari-monk\Build\connection-builder;https://api.nuget.org/v3/index.json</RestoreSources>
-      <UserSecretsId>4ae22f9d-1a9c-4161-8c2c-64b4d00ecafb</UserSecretsId>
+        <UserSecretsId>4ae22f9d-1a9c-4161-8c2c-64b4d00ecafb</UserSecretsId>
   </PropertyGroup>
 
     <ItemGroup>
